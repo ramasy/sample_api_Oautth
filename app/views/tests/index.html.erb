@@ -1,0 +1,7 @@
+<p>
+  <%= link_to "Deconnexion", destroy_user_session_path, method: :delete %>
+</p>
+<p>
+  <%= current_user.admin? %>
+</p>
+<button id="btn" class="btn btn-danger">Eviter de cliquer!!!!!</button>

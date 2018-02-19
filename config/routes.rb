@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get 'api/articles' => 'api#liste_article', as: :api_articles
   post 'api/article' => 'api#creer_article', as: :api_create_article
   get 'api/info/get' => 'api#get_client', as: :api_get_url
+  get 'api/whoami' => 'api#whoami', as: :api_whoami
 end

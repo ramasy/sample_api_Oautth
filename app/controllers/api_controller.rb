@@ -1,7 +1,7 @@
 class ApiController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :doorkeeper_authorize! ,except: [:get_client]
-  
+
   def liste_article
     render json: Article.getAllArticleWithCategory.to_json(include: [:comments , :tags])
   end
@@ -18,5 +18,9 @@ class ApiController < ApplicationController
         client_id: "#{client.uid}",
         client_secret: "#{client.secret}"
     }
+  end
+
+  def whoami
+    render json: {"nom": "test"}
   end
 end

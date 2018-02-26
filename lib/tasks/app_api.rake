@@ -1,6 +1,6 @@
 namespace :app_api do
   desc "creer client pour api"
-  task creerClient: :environment do
+  task creer_client: :environment do
     puts "/!\\ Creation client API"
     client = Doorkeeper::Application.new :name => 'test', :redirect_uri => 'http://example.com'
     client.save
